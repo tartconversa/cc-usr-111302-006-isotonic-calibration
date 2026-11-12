@@ -1,0 +1,12 @@
+[
+  {
+    "path": "fixtures/calibration.json",
+    "sha256": "a6ed1948a3970288855f674876fdcbab1b527c7a4fa8e9c4e43b3c5a88a5c090",
+    "size_bytes": 338
+  },
+  {
+    "path": "fixtures/scores.csv",
+    "sha256": "a7d038bf94cabe618e2e654efbb442e924153dd2ccc3c7769bba555a43a8ecc3",
+    "size_bytes": 259
+  }
+]

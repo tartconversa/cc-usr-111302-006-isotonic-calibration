@@ -1,0 +1,7 @@
+batch_id,group_id,scored_at,probability,label,weight,split
+c1,g1,2026-10-01,0.2,0,1,calibration
+c2,g2,2026-10-02,0.4,1,1,calibration
+c3,g3,2026-10-03,0.6,0,1,calibration
+t1,g4,2026-10-10,0.3,0,1,test
+t2,g5,2026-10-11,0.5,1,1,test
+f1,g0,2026-09-01,0.8,1,1,fit
