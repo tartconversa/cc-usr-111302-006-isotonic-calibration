@@ -1,0 +1,457 @@
+{
+  "bootstrap": {
+    "frozen_map": {
+      "brier": {
+        "mean": 0.125625,
+        "percentiles": {
+          "0.025": 0.0,
+          "0.5": 0.125,
+          "0.975": 0.25
+        },
+        "repeats": 200
+      },
+      "logloss": {
+        "mean": 0.34830645823187,
+        "percentiles": {
+          "0.025": 9.999778782803785e-13,
+          "0.5": 0.34657359028047263,
+          "0.975": 0.6931471805599453
+        },
+        "repeats": 200
+      },
+      "n_groups": 2,
+      "purpose": "评估冻结校准映射在 test 供应批重采样下的不确定性",
+      "refit_calibrator": false,
+      "resampled_population": "test_groups",
+      "resampling_unit": "group_id"
+    },
+    "refit_training": {
+      "brier": {
+        "mean": 0.2288888888888889,
+        "percentiles": {
+          "0.025": 0.0,
+          "0.5": 0.2777777777777778,
+          "0.975": 0.5
+        },
+        "repeats": 200
+      },
+      "evaluated_on": "original_untouched_test_records",
+      "logloss": {
+        "mean": 3.6126425859659914,
+        "percentiles": {
+          "0.025": 9.999778782803785e-13,
+          "0.5": 0.752038698388137,
+          "0.975": 13.815510834489332
+        },
+        "repeats": 200
+      },
+      "n_groups": 3,
+      "purpose": "每次重采样 calibration 供应批后重新拟合校准器的训练不确定性",
+      "refit_calibrator": true,
+      "resampled_population": "calibration_groups",
+      "resampling_unit": "group_id"
+    },
+    "repeats": 200,
+    "resampling_unit": "group_id",
+    "seed": 11130206
+  },
+  "calibration_set_diagnostics": {
+    "calibrated": {
+      "brier": 0.16666666666666666,
+      "logloss": 0.46209812037363013,
+      "logloss_clipping": {
+        "clipped_above_one_minus_epsilon": 0,
+        "clipped_below_epsilon": 1,
+        "clipped_values_written_back": false,
+        "epsilon": 1e-12
+      }
+    },
+    "calibrated_brier_decomposition": {
+      "base_rate": 0.3333333333333333,
+      "bin_interval": "left_closed_right_open_last_includes_one",
+      "bins": [
+        {
+          "brier_term": 0.0,
+          "count": 1,
+          "edge_left": 0.0,
+          "edge_right": 0.25,
+          "mean_prediction": 0.0,
+          "observed_frequency": 0.0,
+          "reliability_term": 0.0,
+          "residual": -0.037037037037037035,
+          "resolution_term": 0.037037037037037035,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.07407407407407407,
+          "weight": 1.0,
+          "weight_share": 0.3333333333333333
+        },
+        {
+          "brier_term": 0.0,
+          "count": 0,
+          "edge_left": 0.25,
+          "edge_right": 0.5,
+          "mean_prediction": null,
+          "observed_frequency": null,
+          "reliability_term": 0.0,
+          "residual": 0.0,
+          "resolution_term": 0.0,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.0,
+          "weight": 0.0,
+          "weight_share": 0.0
+        },
+        {
+          "brier_term": 0.16666666666666666,
+          "count": 2,
+          "edge_left": 0.5,
+          "edge_right": 0.75,
+          "mean_prediction": 0.5,
+          "observed_frequency": 0.5,
+          "reliability_term": 0.0,
+          "residual": 0.037037037037037035,
+          "resolution_term": 0.01851851851851852,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.14814814814814814,
+          "weight": 2.0,
+          "weight_share": 0.6666666666666666
+        },
+        {
+          "brier_term": 0.0,
+          "count": 0,
+          "edge_left": 0.75,
+          "edge_right": 1.0,
+          "mean_prediction": null,
+          "observed_frequency": null,
+          "reliability_term": 0.0,
+          "residual": 0.0,
+          "resolution_term": 0.0,
+          "right_edge_closed": true,
+          "uncertainty_share_term": 0.0,
+          "weight": 0.0,
+          "weight_share": 0.0
+        }
+      ],
+      "brier": 0.16666666666666666,
+      "edges": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "identity_exact_only_when_predictions_constant_in_bin": true,
+      "reliability": 0.0,
+      "residual_brier_minus_three_terms": -2.7755575615628914e-17,
+      "resolution": 0.05555555555555555,
+      "uncertainty": 0.22222222222222224
+    },
+    "n_groups": 3,
+    "n_records": 3,
+    "raw": {
+      "brier": 0.25333333333333335,
+      "logloss": 0.6852416716875066,
+      "logloss_clipping": {
+        "clipped_above_one_minus_epsilon": 0,
+        "clipped_below_epsilon": 0,
+        "clipped_values_written_back": false,
+        "epsilon": 1e-12
+      }
+    },
+    "raw_brier_decomposition": {
+      "base_rate": 0.3333333333333333,
+      "bin_interval": "left_closed_right_open_last_includes_one",
+      "bins": [
+        {
+          "brier_term": 0.013333333333333336,
+          "count": 1,
+          "edge_left": 0.0,
+          "edge_right": 0.25,
+          "mean_prediction": 0.2,
+          "observed_frequency": 0.0,
+          "reliability_term": 0.013333333333333336,
+          "residual": -0.037037037037037035,
+          "resolution_term": 0.037037037037037035,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.07407407407407407,
+          "weight": 1.0,
+          "weight_share": 0.3333333333333333
+        },
+        {
+          "brier_term": 0.12,
+          "count": 1,
+          "edge_left": 0.25,
+          "edge_right": 0.5,
+          "mean_prediction": 0.4,
+          "observed_frequency": 1.0,
+          "reliability_term": 0.12,
+          "residual": 0.0740740740740741,
+          "resolution_term": 0.14814814814814817,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.07407407407407407,
+          "weight": 1.0,
+          "weight_share": 0.3333333333333333
+        },
+        {
+          "brier_term": 0.12,
+          "count": 1,
+          "edge_left": 0.5,
+          "edge_right": 0.75,
+          "mean_prediction": 0.6,
+          "observed_frequency": 0.0,
+          "reliability_term": 0.12,
+          "residual": -0.037037037037037035,
+          "resolution_term": 0.037037037037037035,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.07407407407407407,
+          "weight": 1.0,
+          "weight_share": 0.3333333333333333
+        },
+        {
+          "brier_term": 0.0,
+          "count": 0,
+          "edge_left": 0.75,
+          "edge_right": 1.0,
+          "mean_prediction": null,
+          "observed_frequency": null,
+          "reliability_term": 0.0,
+          "residual": 0.0,
+          "resolution_term": 0.0,
+          "right_edge_closed": true,
+          "uncertainty_share_term": 0.0,
+          "weight": 0.0,
+          "weight_share": 0.0
+        }
+      ],
+      "brier": 0.2533333333333333,
+      "edges": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "identity_exact_only_when_predictions_constant_in_bin": true,
+      "reliability": 0.2533333333333333,
+      "residual_brier_minus_three_terms": 0.0,
+      "resolution": 0.22222222222222224,
+      "uncertainty": 0.22222222222222224
+    }
+  },
+  "config": {
+    "bin_interval": "left_closed_right_open_last_includes_one",
+    "bootstrap_repeats": 200,
+    "evaluate_frozen_map": true,
+    "logloss_epsilon": 1e-12,
+    "map": "right_continuous_step_last_score_not_above_query",
+    "outside_range": "constant_extension",
+    "seed": 11130206,
+    "test_bins": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "notes": [
+    "映射仅由 calibration 子集的二元结果与正权重经 PAVA 拟合，test 标签不参与拟合",
+    "校准只改变概率刻度，不保证区分能力（AUC 等排序指标）必然提高",
+    "logloss 裁剪仅发生在计算瞬间，映射与导出概率保持未裁剪值"
+  ],
+  "split_counts": {
+    "calibration": {
+      "groups": 3,
+      "records": 3
+    },
+    "fit": {
+      "groups": 1,
+      "records": 1
+    },
+    "test": {
+      "groups": 2,
+      "records": 2
+    }
+  },
+  "test_diagnostics": {
+    "calibrated": {
+      "brier": 0.125,
+      "logloss": 0.34657359028047263,
+      "logloss_clipping": {
+        "clipped_above_one_minus_epsilon": 0,
+        "clipped_below_epsilon": 1,
+        "clipped_values_written_back": false,
+        "epsilon": 1e-12
+      }
+    },
+    "calibrated_brier_decomposition": {
+      "base_rate": 0.5,
+      "bin_interval": "left_closed_right_open_last_includes_one",
+      "bins": [
+        {
+          "brier_term": 0.0,
+          "count": 1,
+          "edge_left": 0.0,
+          "edge_right": 0.25,
+          "mean_prediction": 0.0,
+          "observed_frequency": 0.0,
+          "reliability_term": 0.0,
+          "residual": 0.0,
+          "resolution_term": 0.125,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.125,
+          "weight": 1.0,
+          "weight_share": 0.5
+        },
+        {
+          "brier_term": 0.0,
+          "count": 0,
+          "edge_left": 0.25,
+          "edge_right": 0.5,
+          "mean_prediction": null,
+          "observed_frequency": null,
+          "reliability_term": 0.0,
+          "residual": 0.0,
+          "resolution_term": 0.0,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.0,
+          "weight": 0.0,
+          "weight_share": 0.0
+        },
+        {
+          "brier_term": 0.125,
+          "count": 1,
+          "edge_left": 0.5,
+          "edge_right": 0.75,
+          "mean_prediction": 0.5,
+          "observed_frequency": 1.0,
+          "reliability_term": 0.125,
+          "residual": 0.0,
+          "resolution_term": 0.125,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.125,
+          "weight": 1.0,
+          "weight_share": 0.5
+        },
+        {
+          "brier_term": 0.0,
+          "count": 0,
+          "edge_left": 0.75,
+          "edge_right": 1.0,
+          "mean_prediction": null,
+          "observed_frequency": null,
+          "reliability_term": 0.0,
+          "residual": 0.0,
+          "resolution_term": 0.0,
+          "right_edge_closed": true,
+          "uncertainty_share_term": 0.0,
+          "weight": 0.0,
+          "weight_share": 0.0
+        }
+      ],
+      "brier": 0.125,
+      "edges": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "identity_exact_only_when_predictions_constant_in_bin": true,
+      "reliability": 0.125,
+      "residual_brier_minus_three_terms": 0.0,
+      "resolution": 0.25,
+      "uncertainty": 0.25
+    },
+    "n_groups": 2,
+    "n_records": 2,
+    "raw": {
+      "brier": 0.16999999999999998,
+      "logloss": 0.5249110622493389,
+      "logloss_clipping": {
+        "clipped_above_one_minus_epsilon": 0,
+        "clipped_below_epsilon": 0,
+        "clipped_values_written_back": false,
+        "epsilon": 1e-12
+      }
+    },
+    "raw_brier_decomposition": {
+      "base_rate": 0.5,
+      "bin_interval": "left_closed_right_open_last_includes_one",
+      "bins": [
+        {
+          "brier_term": 0.0,
+          "count": 0,
+          "edge_left": 0.0,
+          "edge_right": 0.25,
+          "mean_prediction": null,
+          "observed_frequency": null,
+          "reliability_term": 0.0,
+          "residual": 0.0,
+          "resolution_term": 0.0,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.0,
+          "weight": 0.0,
+          "weight_share": 0.0
+        },
+        {
+          "brier_term": 0.045,
+          "count": 1,
+          "edge_left": 0.25,
+          "edge_right": 0.5,
+          "mean_prediction": 0.3,
+          "observed_frequency": 0.0,
+          "reliability_term": 0.045,
+          "residual": 0.0,
+          "resolution_term": 0.125,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.125,
+          "weight": 1.0,
+          "weight_share": 0.5
+        },
+        {
+          "brier_term": 0.125,
+          "count": 1,
+          "edge_left": 0.5,
+          "edge_right": 0.75,
+          "mean_prediction": 0.5,
+          "observed_frequency": 1.0,
+          "reliability_term": 0.125,
+          "residual": 0.0,
+          "resolution_term": 0.125,
+          "right_edge_closed": false,
+          "uncertainty_share_term": 0.125,
+          "weight": 1.0,
+          "weight_share": 0.5
+        },
+        {
+          "brier_term": 0.0,
+          "count": 0,
+          "edge_left": 0.75,
+          "edge_right": 1.0,
+          "mean_prediction": null,
+          "observed_frequency": null,
+          "reliability_term": 0.0,
+          "residual": 0.0,
+          "resolution_term": 0.0,
+          "right_edge_closed": true,
+          "uncertainty_share_term": 0.0,
+          "weight": 0.0,
+          "weight_share": 0.0
+        }
+      ],
+      "brier": 0.16999999999999998,
+      "edges": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "identity_exact_only_when_predictions_constant_in_bin": true,
+      "reliability": 0.16999999999999998,
+      "residual_brier_minus_three_terms": 0.0,
+      "resolution": 0.25,
+      "uncertainty": 0.25
+    }
+  }
+}
